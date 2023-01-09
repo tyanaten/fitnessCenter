@@ -14,12 +14,20 @@
 @import "global/reboot";
 @import "global/utils";
 @import "global/container";
+@import "global/list-style.scss";
 
 // Blocks
 // ---------------------------------
 
 @import "blocks/btn";
 @import "blocks/modal";
+@import "blocks/main-header.scss";
+@import "blocks/main-list.scss";
+@import "blocks/nav-header.scss";
+@import "blocks/logo.scss";
+@import "blocks/main-section.scss";
+@import "blocks/activities-list.scss";
+@import "blocks/title-section.scss";
 
 // ---------------------------------
 

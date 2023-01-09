@@ -1,0 +1,24 @@
+.main-header {
+  background: conic-gradient(from 130.31deg at 16.03% 39.06%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
+}
+
+.main-header__wrapper {
+  width: 96.67%;
+  max-width: $vr-1160;
+  min-height: 658px;
+  margin: 0 auto;
+  padding: 30px 0;
+  outline: 2px solid #008000;  //delete
+
+  @include vp-1199 {
+    min-width: $vr-678;
+    width: 88.28%;
+    padding: 40px 0;
+  }
+
+  @include vp-767 {
+    min-width: $vr-290;
+    width: 90.62%;
+    padding: 20px 0;
+  }
+}

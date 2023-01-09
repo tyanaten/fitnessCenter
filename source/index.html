@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Описание проекта">
     <title>Фитнес центр</title>
     <link rel="preload" href="fonts/alumniSans-SemiBold.woff2" as="font">
@@ -13,7 +13,51 @@
   </head>
   <body>
     <div class="wrapper">
-      <header>
+      <header class="main-header">
+        <div class="main-header__wrapper">
+          <div class="nav-header">
+            <a class="nav-header__logo logo" href="#">
+              <img src="img/svg/logo.svg" alt="Лого" width="122" height="44">
+            </a>
+            <ul class="main-list list-style">
+              <li class="main-list__item">
+                <a class="main-list__link" href="tel:+78005555555">
+                  8-800-555-55-55
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="main-section">
+            <div class="main-section__wrapper">
+              <div class="main-section__info-section">
+                <ul class="activities-list list-style">
+                  <li class="activities-list__item">
+                    Тренажёрный зал
+                  </li>
+                  <li class="activities-list__item">
+                    Групповые занятия
+                  </li>
+                  <li class="activities-list__item">
+                    Кардио-зона
+                  </li>
+                </ul>
+                <div class="title-section">
+                  <span class="title-section__city">
+                    Омск
+                  </span>
+                  <h1 class="title-section__main-title">
+                    Фитнес центр
+                  </h1>
+                </div>
+              </div>
+              <button class="main-section__button" type="button">Купить абонемент</button>
+            </div>
+            <picture>
+              <source type="image/webp" srcset="img/superman@1x.webp 1x, img/superman@2x.webp 2x">
+              <img src="img/superman@1x.jpg" width="500" height="556" alt="Мужчина в костюме супермена" srcset="img/superman@1x.jpg 1x, img/superman@2x.jpg 2x">
+            </picture>
+          </div>
+        </div>
       </header>
       <main>
       </main>
