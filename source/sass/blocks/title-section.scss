@@ -50,4 +50,9 @@
     line-height: 86px;
     text-transform: none;
   }
+
+  @include vp-767 {
+    width: clamp(191px, 65.8%, 505px);
+    max-width: min-content;
+  }
 }

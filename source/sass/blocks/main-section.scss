@@ -13,6 +13,22 @@
     width: 100%;
     padding-left: 0;
   }
+
+  picture {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: clamp(50px, 54.2%, 500px);
+    margin-bottom: auto;
+
+    @include vp-1199 {
+      width: clamp(50px, 47.79%, 500px);
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
 }
 
 .main-section__wrapper {
@@ -48,22 +64,6 @@
   @include vp-767 {
     width: 100%;
     margin-bottom: 20px;
-  }
-}
-
-picture {
-  position: relative;
-  z-index: 1;
-  display: block;
-  width: clamp(50px, 54.2%, 500px);
-  margin-bottom: auto;
-
-  @include vp-1199 {
-    width: clamp(50px, 47.79%, 500px);
-  }
-
-  @include vp-767 {
-    display: none;
   }
 }
 

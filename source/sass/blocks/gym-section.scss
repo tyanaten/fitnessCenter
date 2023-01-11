@@ -1,0 +1,201 @@
+.gym-section__wrapper {
+  position: relative;
+  width: 84.92%;
+  max-width: $vr-1160;
+  min-height: 756px;
+  margin: 0 auto;
+  padding: 120px 0;
+  padding-left: 60px;
+  outline: 1px solid green;
+
+  @include vp-1199 {
+    min-width: $vr-678;
+    width: 88.28%;
+    min-height: 854px;
+    padding: 100px 0;
+  }
+
+  @include vp-767 {
+    min-width: $vr-290;
+    width: 90.62%;
+    min-height: 925px;
+    padding: 70px 0;
+  }
+
+  picture {
+    width: clamp(100px, 60.1%, 660px);
+    margin-bottom: auto;
+
+    @include vp-1199 {
+      width: 100%;
+
+      img {
+        width: 100%;
+        aspect-ratio: 1.96 / 1;
+      }
+    }
+
+    @include vp-767 {
+      position: relative;
+      width: 110.35%;
+      margin-bottom: 40px;
+
+      img {
+        aspect-ratio: 1.02 / 1;
+      }
+    }
+  }
+}
+
+.gym-section__article {
+  display: flex;
+  justify-content: space-between;
+
+  @include vp-1199 {
+    flex-direction: column;
+    justify-content: initial;
+    align-items: center;
+  }
+}
+
+.gym-section__info {
+  width: clamp(100px, 32.8%, 355px);
+  margin-top: 49px;
+  margin-right: 15px;
+
+  @include vp-1199 {
+    width: clamp(502px, 74%, 800px);
+    margin: 0;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: left;
+  }
+
+  h2 {
+    margin: 0;
+    margin-bottom: 25px;
+    font-family: $ff-alumni;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 58px;
+    letter-spacing: 0.03em;
+    color: $color-default-dark;
+
+    @include vp-1199 {
+      margin-bottom: 6px;
+      font-size: 42px;
+      line-height: 50px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 20px;
+      font-size: 32px;
+      line-height: 38px;
+    }
+  }
+}
+
+.gym-section__subtitle {
+  margin: 0;
+  margin-bottom: 45px;
+  font-size: 18px;
+  line-height: 27px;
+  color: $color-default-dark;
+
+  @include vp-1199 {
+    margin-bottom: 40px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 30px;
+  }
+}
+
+.gym-section__text {
+  margin: 0;
+  margin-bottom: 10px;
+  font-weight: 300;
+  line-height: 24px;
+  color: $color-default-dark;
+
+  @include vp-1199 {
+    & + .gym-section__text {
+      display: none;
+    }
+  }
+}
+
+.gym-section__video {
+  position: absolute;
+  top: 408px;
+  left: 420px;
+  z-index: 2;
+  width: clamp(100px, 34.3%, 364px);
+  aspect-ratio: 1.6 / 1;
+
+  @include vp-1199 {
+    position: relative;
+    top: -84px;
+    left: 32.85%;
+    margin-bottom: -94px;
+  }
+
+  @include vp-767 {
+    width: 110.35%;
+    top: 0;
+    left: -5.17%;
+    margin: 0;
+  }
+}
+
+.gym-section__video-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(20, 54, 122, 0.5);
+  background-image: url("../img/video-preview@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+
+  @media (max-width: 3000px) {
+    @include retina {
+      background-image: url("../img/video-preview@2x.jpg");
+    }
+  }
+
+  @include vp-767 {
+    background-image: url("../img/video-preview-mobile@1x.jpg");
+
+    @include retina {
+      background-image: url("../img/video-preview-mobile@2x.jpg");
+    }
+  }
+}
+
+.gym-section__video-button {
+  position: absolute;
+  top: calc(50% - 50px);
+  left: calc(50% - 50px);
+  width: 100px;
+  height: 100px;
+  background-color: inherit;
+  background-image: url("../img/svg/play.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: 100px 100px;
+  border: none;
+
+  @include vp-1199 {
+    top: calc(50% - 36.5px);
+    left: calc(50% - 36.5px);
+    width: 73px;
+    height: 73px;
+    background-size: 73px 73px;
+  }
+}

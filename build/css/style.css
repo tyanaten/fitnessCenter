@@ -897,6 +897,14 @@ button,
   padding-left: 19px;
 }
 
+.main-section picture {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: clamp(50px, 54.2%, 500px);
+  margin-bottom: auto;
+}
+
 .main-section__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -924,14 +932,6 @@ button,
   -ms-flex-align: end;
   align-items: flex-end;
   margin-bottom: 50px;
-}
-
-picture {
-  position: relative;
-  z-index: 1;
-  display: block;
-  width: clamp(50px, 54.2%, 500px);
-  margin-bottom: auto;
 }
 
 .main-section__button {
@@ -1011,6 +1011,98 @@ picture {
   color: #ffffff;
 }
 
+.gym-section__wrapper {
+  position: relative;
+  width: 84.92%;
+  max-width: 1160px;
+  min-height: 756px;
+  margin: 0 auto;
+  padding: 120px 0;
+  padding-left: 60px;
+  outline: 1px solid green;
+}
+
+.gym-section__wrapper picture {
+  width: clamp(100px, 60.1%, 660px);
+  margin-bottom: auto;
+}
+
+.gym-section__article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.gym-section__info {
+  width: clamp(100px, 32.8%, 355px);
+  margin-top: 49px;
+  margin-right: 15px;
+}
+
+.gym-section__info h2 {
+  margin: 0;
+  margin-bottom: 25px;
+  font-family: "Alumni Sans", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 58px;
+  letter-spacing: 0.03em;
+  color: #102654;
+}
+
+.gym-section__subtitle {
+  margin: 0;
+  margin-bottom: 45px;
+  font-size: 18px;
+  line-height: 27px;
+  color: #102654;
+}
+
+.gym-section__text {
+  margin: 0;
+  margin-bottom: 10px;
+  font-weight: 300;
+  line-height: 24px;
+  color: #102654;
+}
+
+.gym-section__video {
+  position: absolute;
+  top: 408px;
+  left: 420px;
+  z-index: 2;
+  width: clamp(100px, 34.3%, 364px);
+  aspect-ratio: 1.6/1;
+}
+
+.gym-section__video-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(20, 54, 122, 0.5);
+  background-image: url("../img/video-preview@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+}
+
+.gym-section__video-button {
+  position: absolute;
+  top: calc(50% - 50px);
+  left: calc(50% - 50px);
+  width: 100px;
+  height: 100px;
+  background-color: inherit;
+  background-image: url("../img/svg/play.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: 100px 100px;
+  border: none;
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
@@ -1051,6 +1143,12 @@ picture {
     }
   }
 */
+
+@media (max-width: 3000px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 3000px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 3000px) and (min-resolution: 144dpi), (max-width: 3000px) and (min-resolution: 1.5dppx) {
+  .gym-section__video-link {
+    background-image: url("../img/video-preview@2x.jpg");
+  }
+}
 
 @media (max-width: 1439px) {
   .container {
@@ -1102,6 +1200,10 @@ picture {
     padding-left: 0;
   }
 
+  .main-section picture {
+    width: clamp(50px, 47.79%, 500px);
+  }
+
   .main-section__wrapper {
     min-width: 324px;
     margin-right: 30px;
@@ -1110,10 +1212,6 @@ picture {
 
   .main-section__info-section {
     margin-bottom: 30px;
-  }
-
-  picture {
-    width: clamp(50px, 47.79%, 500px);
   }
 
   .main-section__button {
@@ -1137,6 +1235,71 @@ picture {
     font-size: 72px;
     line-height: 86px;
     text-transform: none;
+  }
+
+  .gym-section__wrapper {
+    min-width: 678px;
+    width: 88.28%;
+    min-height: 854px;
+    padding: 100px 0;
+  }
+
+  .gym-section__wrapper picture {
+    width: 100%;
+  }
+
+  .gym-section__wrapper picture img {
+    width: 100%;
+    aspect-ratio: 1.96/1;
+  }
+
+  .gym-section__article {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: initial;
+    -ms-flex-pack: initial;
+    justify-content: initial;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .gym-section__info {
+    width: clamp(502px, 74%, 800px);
+    margin: 0;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  .gym-section__info h2 {
+    margin-bottom: 6px;
+    font-size: 42px;
+    line-height: 50px;
+  }
+
+  .gym-section__subtitle {
+    margin-bottom: 40px;
+  }
+
+  .gym-section__text + .gym-section__text {
+    display: none;
+  }
+
+  .gym-section__video {
+    position: relative;
+    top: -84px;
+    left: 32.85%;
+    margin-bottom: -94px;
+  }
+
+  .gym-section__video-button {
+    top: calc(50% - 36.5px);
+    left: calc(50% - 36.5px);
+    width: 73px;
+    height: 73px;
+    background-size: 73px 73px;
   }
 }
 
@@ -1183,6 +1346,10 @@ picture {
     height: 15px;
   }
 
+  .main-section picture {
+    display: none;
+  }
+
   .main-section__wrapper {
     margin: 0;
     min-width: 100%;
@@ -1191,10 +1358,6 @@ picture {
   .main-section__info-section {
     width: 100%;
     margin-bottom: 20px;
-  }
-
-  picture {
-    display: none;
   }
 
   .main-section__button {
@@ -1210,6 +1373,63 @@ picture {
     margin-bottom: 15px;
     font-size: 28px;
     line-height: 34px;
+  }
+
+  .title-section__main-title {
+    width: clamp(191px, 65.8%, 505px);
+    max-width: -webkit-min-content;
+    max-width: -moz-min-content;
+    max-width: min-content;
+  }
+
+  .gym-section__wrapper {
+    min-width: 290px;
+    width: 90.62%;
+    min-height: 925px;
+    padding: 70px 0;
+  }
+
+  .gym-section__wrapper picture {
+    position: relative;
+    width: 110.35%;
+    margin-bottom: 40px;
+  }
+
+  .gym-section__wrapper picture img {
+    aspect-ratio: 1.02/1;
+  }
+
+  .gym-section__info {
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: left;
+  }
+
+  .gym-section__info h2 {
+    margin-bottom: 20px;
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  .gym-section__subtitle {
+    margin-bottom: 30px;
+  }
+
+  .gym-section__video {
+    width: 110.35%;
+    top: 0;
+    left: -5.17%;
+    margin: 0;
+  }
+
+  .gym-section__video-link {
+    background-image: url("../img/video-preview-mobile@1x.jpg");
+  }
+}
+
+@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+  .gym-section__video-link {
+    background-image: url("../img/video-preview-mobile@2x.jpg");
   }
 }
 
