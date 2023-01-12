@@ -6,7 +6,6 @@
   margin: 0 auto;
   padding: 120px 0;
   padding-left: 60px;
-  outline: 1px solid green;
 
   @include vp-1199 {
     min-width: $vr-678;
@@ -20,30 +19,6 @@
     width: 90.62%;
     min-height: 925px;
     padding: 70px 0;
-  }
-
-  picture {
-    width: clamp(100px, 60.1%, 660px);
-    margin-bottom: auto;
-
-    @include vp-1199 {
-      width: 100%;
-
-      img {
-        width: 100%;
-        aspect-ratio: 1.96 / 1;
-      }
-    }
-
-    @include vp-767 {
-      position: relative;
-      width: 110.35%;
-      margin-bottom: 40px;
-
-      img {
-        aspect-ratio: 1.02 / 1;
-      }
-    }
   }
 }
 
@@ -130,6 +105,51 @@
   }
 }
 
+.gym-section__picture {
+  width: clamp(100px, 60.3%, 660px);
+  margin-bottom: auto;
+  background-color: rgba(20, 54, 122, 0.5);
+  background-image: url("../img/gym@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+  aspect-ratio: 1.64 / 1;
+
+  @media (max-width: 3000px) {
+    @include retina {
+      background-image: url("../img/gym@2x.jpg");
+    }
+  }
+
+  @include vp-1199 {
+    width: 100%;
+    background-image: url("../img/gym-tablet@1x.jpg");
+    aspect-ratio: 1.96 / 1;
+
+    @include retina {
+      background-image: url("../img/gym-tablet@2x.jpg");
+    }
+  }
+
+  @media (min-width: 469px) and (max-width: 767px) {
+    height: auto;
+    aspect-ratio: 1.5 / 1;
+  }
+
+  @include vp-767 {
+    position: relative;
+    width: 110.35%;
+    height: 313px;
+    margin-bottom: 40px;
+    background-image: url("../img/gym-mobile@1x.jpg");
+    aspect-ratio: initial;
+
+    @include retina {
+      background-image: url("../img/gym-mobile@2x.jpg");
+    }
+  }
+}
+
 .gym-section__video {
   position: absolute;
   top: 408px;
@@ -142,6 +162,7 @@
     position: relative;
     top: -84px;
     left: 32.85%;
+    width: clamp(266px, 39.2%, 800px);
     margin-bottom: -94px;
   }
 
@@ -150,6 +171,7 @@
     top: 0;
     left: -5.17%;
     margin: 0;
+    aspect-ratio: 1.92 / 1;
   }
 }
 
@@ -182,14 +204,16 @@
   position: absolute;
   top: calc(50% - 50px);
   left: calc(50% - 50px);
+  z-index: 5;
   width: 100px;
   height: 100px;
-  background-color: inherit;
+  background-color: initial;
   background-image: url("../img/svg/play.svg");
   background-repeat: no-repeat;
   background-position: 50% 0;
   background-size: 100px 100px;
   border: none;
+  cursor: pointer;
 
   @include vp-1199 {
     top: calc(50% - 36.5px);
@@ -197,5 +221,18 @@
     width: 73px;
     height: 73px;
     background-size: 73px 73px;
+  }
+
+  &:hover {
+    top: calc(50% - 55px);
+    left: calc(50% - 55px);
+    width: 110px;
+    height: 110px;
+    background-size: 110px 110px;
+    transition: all 500ms ease;
+  }
+
+  &:active {
+    opacity: 0.8;
   }
 }

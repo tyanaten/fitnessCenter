@@ -1019,12 +1019,6 @@ button,
   margin: 0 auto;
   padding: 120px 0;
   padding-left: 60px;
-  outline: 1px solid green;
-}
-
-.gym-section__wrapper picture {
-  width: clamp(100px, 60.1%, 660px);
-  margin-bottom: auto;
 }
 
 .gym-section__article {
@@ -1069,6 +1063,17 @@ button,
   color: #102654;
 }
 
+.gym-section__picture {
+  width: clamp(100px, 60.3%, 660px);
+  margin-bottom: auto;
+  background-color: rgba(20, 54, 122, 0.5);
+  background-image: url("../img/gym@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+  aspect-ratio: 1.64/1;
+}
+
 .gym-section__video {
   position: absolute;
   top: 408px;
@@ -1093,14 +1098,31 @@ button,
   position: absolute;
   top: calc(50% - 50px);
   left: calc(50% - 50px);
+  z-index: 5;
   width: 100px;
   height: 100px;
-  background-color: inherit;
+  background-color: initial;
   background-image: url("../img/svg/play.svg");
   background-repeat: no-repeat;
   background-position: 50% 0;
   background-size: 100px 100px;
   border: none;
+  cursor: pointer;
+}
+
+.gym-section__video-button:hover {
+  top: calc(50% - 55px);
+  left: calc(50% - 55px);
+  width: 110px;
+  height: 110px;
+  background-size: 110px 110px;
+  -webkit-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+
+.gym-section__video-button:active {
+  opacity: 0.8;
 }
 
 /* @mixin hover-focus {
@@ -1145,6 +1167,10 @@ button,
 */
 
 @media (max-width: 3000px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 3000px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 3000px) and (min-resolution: 144dpi), (max-width: 3000px) and (min-resolution: 1.5dppx) {
+  .gym-section__picture {
+    background-image: url("../img/gym@2x.jpg");
+  }
+
   .gym-section__video-link {
     background-image: url("../img/video-preview@2x.jpg");
   }
@@ -1244,15 +1270,6 @@ button,
     padding: 100px 0;
   }
 
-  .gym-section__wrapper picture {
-    width: 100%;
-  }
-
-  .gym-section__wrapper picture img {
-    width: 100%;
-    aspect-ratio: 1.96/1;
-  }
-
   .gym-section__article {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1287,10 +1304,17 @@ button,
     display: none;
   }
 
+  .gym-section__picture {
+    width: 100%;
+    background-image: url("../img/gym-tablet@1x.jpg");
+    aspect-ratio: 1.96/1;
+  }
+
   .gym-section__video {
     position: relative;
     top: -84px;
     left: 32.85%;
+    width: clamp(266px, 39.2%, 800px);
     margin-bottom: -94px;
   }
 
@@ -1300,6 +1324,12 @@ button,
     width: 73px;
     height: 73px;
     background-size: 73px 73px;
+  }
+}
+
+@media (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1199px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1199px) and (min-resolution: 144dpi), (max-width: 1199px) and (min-resolution: 1.5dppx) {
+  .gym-section__picture {
+    background-image: url("../img/gym-tablet@2x.jpg");
   }
 }
 
@@ -1389,16 +1419,6 @@ button,
     padding: 70px 0;
   }
 
-  .gym-section__wrapper picture {
-    position: relative;
-    width: 110.35%;
-    margin-bottom: 40px;
-  }
-
-  .gym-section__wrapper picture img {
-    aspect-ratio: 1.02/1;
-  }
-
   .gym-section__info {
     width: 100%;
     margin-bottom: 40px;
@@ -1415,11 +1435,21 @@ button,
     margin-bottom: 30px;
   }
 
+  .gym-section__picture {
+    position: relative;
+    width: 110.35%;
+    height: 313px;
+    margin-bottom: 40px;
+    background-image: url("../img/gym-mobile@1x.jpg");
+    aspect-ratio: initial;
+  }
+
   .gym-section__video {
     width: 110.35%;
     top: 0;
     left: -5.17%;
     margin: 0;
+    aspect-ratio: 1.92/1;
   }
 
   .gym-section__video-link {
@@ -1428,8 +1458,19 @@ button,
 }
 
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+  .gym-section__picture {
+    background-image: url("../img/gym-mobile@2x.jpg");
+  }
+
   .gym-section__video-link {
     background-image: url("../img/video-preview-mobile@2x.jpg");
+  }
+}
+
+@media (min-width: 469px) and (max-width: 767px) {
+  .gym-section__picture {
+    height: auto;
+    aspect-ratio: 1.5/1;
   }
 }
 
