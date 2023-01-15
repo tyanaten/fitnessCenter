@@ -1,0 +1,37 @@
+.options-list {
+  position: relative;
+  z-index: 5;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  width: 100%;
+  margin-top: 80px;
+  margin-bottom: 40px;
+
+  @include vp-1199 {
+    grid-template-columns: 1fr;
+  }
+
+  @include vp-767 {
+    gap: 35px;
+  }
+
+  &::before {
+    content: attr(data-list-title);
+    position: absolute;
+    top: -50px;
+    left: 20px;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 30px;
+    color: $color-blue;
+  }
+
+  &--with-js {
+    margin-top: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+}
