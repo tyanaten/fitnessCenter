@@ -1,11 +1,47 @@
 .subscriptions {
   background-color: #f8f9fc;
-  overflow-x: hidden;
   margin-bottom: 120px;
+
+  @include vp-1199 {
+    position: relative;
+    z-index: 10;
+  }
+
+  &::after {
+    content: attr(data-price);
+    position: absolute;
+    top: 1400px;
+    right: calc(50% - 800px);
+    z-index: 1;
+    display: block;
+    width: 321px;
+    height: 384px;
+    transform: rotate(150deg);
+    background-image: url("../img/discs@1x.png");
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+
+    @include retina {
+      background-image: url("../img/discs@2x.png");
+    }
+
+    @include vp-1199 {
+      top: 1700px;
+      right: calc(-10%);
+      width: 289px;
+      height: 345px;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
 }
 
 .subscriptions__wrapper {
   position: relative;
+  z-index: 5;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,37 +66,6 @@
     min-height: 1487px;
     padding: 70px 0;
     padding-bottom: 40px;
-  }
-
-  &::after {
-    content: attr(data-price);
-    position: absolute;
-    top: 580px;
-    right: 283px;
-    z-index: 1;
-    display: block;
-    width: 321px;
-    height: 384px;
-    transform: rotate(150deg);
-    background-image: url("../img/discs@1x.png");
-    background-repeat: no-repeat;
-    background-position: 50% 0;
-    background-size: cover;
-
-    @include retina {
-      background-image: url("../img/discs@2x.png");
-    }
-
-    @include vp-1199 {
-      top: 1460px;
-      right: -150px;
-      width: 289px;
-      height: 345px;
-    }
-
-    @include vp-767 {
-      display: none;
-    }
   }
 
   h2 {
