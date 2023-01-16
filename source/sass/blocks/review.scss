@@ -1,0 +1,122 @@
+.review__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 84.92%;
+  max-width: $vr-1160;
+  min-height: 581px;
+  margin: 0 auto;
+  padding: 117px 0 120px 0;
+
+  @include vp-1199 {
+    min-width: $vr-678;
+    width: 88.28%;
+    min-height: 524px;
+    padding: 100px 0;
+  }
+
+  @include vp-767 {
+    min-width: $vr-290;
+    width: 90.62%;
+    min-height: 549px;
+    padding: 70px 0;
+  }
+
+  &--with-js {
+    padding: 117px 300px 120px 300px;
+    overflow: hidden;
+
+    @include vp-1199 {
+      padding: 100px 56px;
+    }
+
+    @include vp-767 {
+      padding: 70px 32px;
+    }
+  }
+
+  h2 {
+    margin: 0;
+    margin-bottom: 37px;
+    font-family: $ff-alumni;
+    font-weight: 600;
+    font-size: 54px;
+    line-height: 65px;
+    letter-spacing: 0.03em;
+    color: $color-blue;
+
+    @include vp-1199 {
+      font-size: 42px;
+      line-height: 50px;
+      margin-bottom: 50px;
+    }
+
+    @include vp-767 {
+      font-size: 32px;
+      line-height: 38px;
+    }
+  }
+}
+
+.review__carousel-button {
+  position: absolute;
+  z-index: 5;
+  display: none;
+  width: 16px;
+  height: 32px;
+  background-image: url("../img/svg/swiper-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+
+  @include vp-767 {
+    width: 10px;
+    height: 19px;
+    background-size: contain;
+  }
+
+  &--prev {
+    top: 56%;
+    left: 244px;
+    transform: rotate(180deg);
+
+    @include vp-1199 {
+      top: 55%;
+      left: 0;
+    }
+
+    @include vp-767 {
+      top: 54%;
+    }
+  }
+
+  &--next {
+    top: 56%;
+    right: 244px;
+
+    @include vp-1199 {
+      top: 55%;
+      right: 0;
+    }
+
+    @include vp-767 {
+      top: 54%;
+    }
+  }
+
+  &--with-js {
+    display: block;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

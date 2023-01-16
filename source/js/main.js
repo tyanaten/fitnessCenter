@@ -4,6 +4,7 @@ import './modules/video.js';
 import './modules/subscriptions.js';
 import './modules/navigation.js';
 import './modules/slider.js';
+import './modules/carousel.js';
 
 // ---------------------------------
 
