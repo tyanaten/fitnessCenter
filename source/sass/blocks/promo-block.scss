@@ -22,13 +22,11 @@
   display: grid;
   grid-template-columns: repeat(2, min-content);
   grid-template-rows: min-content;
-  gap: 0 50px;
   width: 343px;
   min-height: 328px;
   margin: auto;
 
   @include vp-1199 {
-    gap: 0 29px;
     width: 202px;
     min-height: 190px;
   }
@@ -37,6 +35,7 @@
 .promo-block__title {
   width: 201px;
   margin: 0;
+  margin-right: 50px;
   font-family: $ff-alumni;
   font-weight: 600;
   font-size: 82px;
@@ -45,6 +44,7 @@
 
   @include vp-1199 {
     width: 117px;
+    margin-right: 29px;
     font-size: 48px;
     line-height: 46px;
   }

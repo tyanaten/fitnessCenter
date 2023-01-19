@@ -1806,6 +1806,7 @@ button,
 }
 
 .title-section__main-title {
+  display: block;
   max-width: 250px;
   margin: 0;
   font-family: "Alumni Sans", "Arial", sans-serif;
@@ -2769,7 +2770,6 @@ button,
   -ms-grid-rows: min-content;
   grid-template-rows: -webkit-min-content;
   grid-template-rows: min-content;
-  gap: 0 50px;
   width: 343px;
   min-height: 328px;
   margin: auto;
@@ -2778,6 +2778,7 @@ button,
 .promo-block__title {
   width: 201px;
   margin: 0;
+  margin-right: 50px;
   font-family: "Alumni Sans", "Arial", sans-serif;
   font-weight: 600;
   font-size: 82px;
@@ -3099,6 +3100,11 @@ button,
     background-size: 73px 73px;
   }
 
+  .option__button {
+    width: 46.6%;
+    min-width: 206px;
+  }
+
   .subscriptions {
     position: relative;
     z-index: 10;
@@ -3304,13 +3310,13 @@ button,
   }
 
   .promo-block__wrapper {
-    gap: 0 29px;
     width: 202px;
     min-height: 190px;
   }
 
   .promo-block__title {
     width: 117px;
+    margin-right: 29px;
     font-size: 48px;
     line-height: 46px;
   }
@@ -3450,9 +3456,7 @@ button,
 
   .title-section__main-title {
     width: clamp(191px, 65.8%, 505px);
-    max-width: -webkit-min-content;
-    max-width: -moz-min-content;
-    max-width: min-content;
+    max-width: initial;
   }
 
   .gym-section__wrapper {
@@ -3532,6 +3536,7 @@ button,
   }
 
   .option__button {
+    width: 71%;
     padding: 27px 10px;
     font-size: 16px;
     line-height: 24px;
@@ -3771,13 +3776,21 @@ button,
 
   .promo__wrapper picture {
     width: 100%;
+    overflow: hidden;
     aspect-ratio: 1/1.01;
   }
 
   .promo__wrapper picture img {
-    width: 200%;
-    -o-object-fit: none;
-    object-fit: none;
+    position: relative;
+    top: 25px;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: 50% 0;
+    object-position: 50% 0;
+    -webkit-transform: scale(1.16);
+    -ms-transform: scale(1.16);
+    transform: scale(1.16);
     aspect-ratio: initial;
   }
 }
