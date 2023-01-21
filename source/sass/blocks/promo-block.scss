@@ -8,7 +8,7 @@
   aspect-ratio: 1/1;
 
   @include vp-1199 {
-    padding: 5px;
+    padding: 51px 45px;
   }
 
   @include vp-767 {
@@ -20,15 +20,16 @@
 
 .promo-block__wrapper {
   display: grid;
-  grid-template-columns: repeat(2, min-content);
+  grid-template-columns: repeat(2, max-content);
   grid-template-rows: min-content;
   width: 343px;
   min-height: 328px;
   margin: auto;
 
   @include vp-1199 {
-    width: 202px;
-    min-height: 190px;
+    grid-template-columns: 1fr min-content;
+    width: 100%;
+    min-height: 100%;
   }
 }
 
@@ -40,13 +41,17 @@
   font-weight: 600;
   font-size: 82px;
   line-height: 79px;
+  word-wrap: break-word;
   letter-spacing: 0.03em;
 
   @include vp-1199 {
-    width: 117px;
-    margin-right: 29px;
+    width: 100%;
+    min-width: 146px;
+    padding-right: 29px;
+    margin-right: 0;
     font-size: 48px;
     line-height: 46px;
+    word-break: break-word;
   }
 }
 
@@ -58,7 +63,7 @@
   line-height: 27px;
 
   @include vp-1199 {
-    width: 202px;
+    width: 100%;
     margin: 15px 0 36px 0;
     font-size: 12px;
     line-height: 18px;
@@ -81,8 +86,9 @@
   border: 4px solid $color-default-white;
 
   @include vp-1199 {
-    width: 202px;
+    width: 100%;
     min-height: 39px;
+    margin-top: auto;
     padding: 11px;
     font-size: 10px;
     line-height: 12px;
@@ -96,6 +102,12 @@
   &:active {
     opacity: 0.3;
   }
+}
+
+.promo-block__list {
+  display: block;
+  flex-grow: 1;
+  margin-left: auto;
 }
 
 .promo-block__list-item {
@@ -122,6 +134,7 @@
   margin-bottom: 5px;
   font-size: 18px;
   line-height: 27px;
+  word-wrap: break-word;
 
   @include vp-1199 {
     margin-bottom: 2px;
@@ -150,19 +163,17 @@
   grid-template-rows: auto;
   gap: 0 8px;
 
-  .promo-block__item-text {
-    grid-row: 1/3;
-  }
-
   @include vp-1199 {
     gap: 0 3px;
   }
 }
 
 .promo-block__item-text {
+  grid-row: 1/3;
   font-weight: 700;
   font-size: 40px;
   line-height: 40px;
+  word-wrap: break-word;
 
   @include vp-1199 {
     font-size: 24px;
