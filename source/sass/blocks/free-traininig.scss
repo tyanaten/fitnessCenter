@@ -4,7 +4,7 @@
 
 .free-traininig__wrapper {
   width: 410px;
-  color: #ffffff;
+  color: $color-default-white;
 
   @include vp-1199 {
     min-width: $vr-678;

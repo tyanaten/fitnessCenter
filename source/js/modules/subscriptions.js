@@ -26,6 +26,8 @@ subscriptionsLists.forEach((list) => {
 showActiveList();
 
 tabsButtons.forEach((tab) => {
+  tab.setAttribute('tabindex', 0);
+
   tab.addEventListener('click', () => {
     activeTab.classList.remove(ACTIVE_BUTTON_CLASS);
     tab.classList.add(ACTIVE_BUTTON_CLASS);

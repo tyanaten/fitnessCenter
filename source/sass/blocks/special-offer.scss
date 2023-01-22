@@ -1,7 +1,6 @@
 .special-offer {
   display: flex;
   height: max-content;
-  background-color: #4a7ce4;
 
   @include vp-767 {
     flex-direction: column;
@@ -61,7 +60,7 @@
   width: clamp(90px, 50%, 280px);
   min-height: 100%;
   padding: 45px;
-  color: #ffffff;
+  color: $color-default-white;
   background-color: #ed0233;
 
   @include vp-1199 {
@@ -136,6 +135,6 @@
     left: 0;
     width: 100%;
     height: 1px;
-    background-color: #ffffff;
+    background-color: $color-default-white;
   }
 }

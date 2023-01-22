@@ -20,7 +20,7 @@
       z-index: 3;
       width: 40px;
       height: 100%;
-      background-color: #ffffff;
+      background-color: $color-default-white;
 
       @include vp-1199 {
         left: -10px;
@@ -39,7 +39,7 @@
       z-index: 3;
       width: 40px;
       height: 100%;
-      background-color: #ffffff;
+      background-color: $color-default-white;
 
       @include vp-1199 {
         right: -10px;
@@ -169,7 +169,7 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 27px;
-  color: #ffffff;
+  color: $color-default-white;
   background-color: #c1c7d2;
   background-repeat: no-repeat;
   background-position: 50% 0;

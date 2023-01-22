@@ -14,11 +14,21 @@ const createIframe = () => {
   return iframe;
 };
 
-button.removeAttribute('href');
-
-button.addEventListener('click', () => {
+const playVideo = () => {
   const iframe = createIframe();
   video.style.background = 'none';
   button.remove();
   video.appendChild(iframe);
+};
+
+button.removeAttribute('href');
+
+button.addEventListener('click', () => {
+  playVideo();
+});
+
+button.addEventListener('keypress', (evt) => {
+  if (evt.keyCode === 13) {
+    playVideo();
+  }
 });
