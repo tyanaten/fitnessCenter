@@ -702,6 +702,79 @@
             </button>
           </div>
         </section>
+        <div class="section-wrapper">
+          <section class="free-traininig">
+            <div class="free-traininig__wrapper">
+              <h2>
+                Бесплатное занятие
+              </h2>
+              <form class="free-traininig__form form" action="https://echo.htmlacademy.ru/" method="post">
+                <div class="form__field">
+                  <label class="visually-hidden" for="name">Имя</label>
+                  <input type="text" name="name" id="name" placeholder="Имя" required minlength="1">
+                  <div class="form__error visually-hidden" data-error-message="name">
+                    Введите корректное имя
+                  </div>
+                </div>
+                <div class="form__field">
+                  <label class="visually-hidden" for="tel">Номер телефона</label>
+                  <input type="tel" name="tel" id="tel" placeholder="Телефон" required pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$">
+                  <div class="form__error visually-hidden" data-error-message="tel">
+                    Необходим полный номер телефона
+                  </div>
+                </div>
+                <button class="form__button" type="submit" data-form-submit>
+                  отправить
+                </button>
+              </form>
+            </div>
+          </section>
+          <section class="contact">
+            <div class="contact__wrapper">
+              <h2>
+                Контакты
+              </h2>
+              <ul class="contact__list contact-list list-style">
+                <li class="contact-list__item">
+                  <p class="contact-list__subtitle">
+                    Адрес:
+                  </p>
+                  <p class="contact-list__text">
+                    г. Омск, ул.&nbsp;60&nbsp;лет Октября, 7
+                  </p>
+                </li>
+                <li class="contact-list__item">
+                  <p class="contact-list__subtitle">
+                    График работы:
+                  </p>
+                  <p class="contact-list__text">
+                    Пн-Вс: с&nbsp;8:00 до&nbsp;22:00
+                  </p>
+                </li>
+                <li class="contact-list__item">
+                  <p class="contact-list__subtitle">
+                    Телефон:
+                  </p>
+                  <p class="contact-list__text">
+                    <a class="contact-list__link" href="tel:+78005555555">
+                      8-800-555-55-55
+                    </a>
+                  </p>
+                </li>
+                <li class="contact-list__item">
+                  <p class="contact-list__subtitle">
+                    Email:
+                  </p>
+                  <p class="contact-list__text">
+                    <a class="contact-list__link" href="mailto:omsk@supergym.ru">
+                      omsk@supergym.ru
+                    </a>
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
       </main>
       <footer>
       </footer>

@@ -1,0 +1,51 @@
+.section-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 84.92%;
+  max-width: $vr-1160;
+  min-height: 337px;
+  margin: 0 auto;
+  padding: 56px 0 70px 0;
+
+  @include vp-1199 {
+    flex-direction: column;
+    justify-content: initial;
+    width: 100%;
+    max-width: initial;
+    min-height: initial;
+    margin: 0;
+    padding: 0;
+  }
+
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: -2;
+    width: 117%;
+    height: 1px;
+    background-color: #74819c;
+
+    @include vp-1199 {
+      display: none;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 50%;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-color: $color-default-dark;
+
+    @include vp-1199 {
+      display: none;
+    }
+  }
+}
