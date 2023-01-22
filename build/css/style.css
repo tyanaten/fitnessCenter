@@ -4152,10 +4152,10 @@ button,
   .gym-section__picture {
     position: relative;
     width: 110.35%;
-    height: 313px;
     margin-bottom: 40px;
     background-image: url("../img/gym-mobile@1x.jpg");
-    aspect-ratio: initial;
+    background-position: 90% 50%;
+    aspect-ratio: 1.02/1;
   }
 
   .gym-section__video {
@@ -4646,13 +4646,6 @@ button,
 
   .gym-section__video {
     background-image: url("../img/video-preview-mobile@2x.jpg");
-  }
-}
-
-@media (min-width: 469px) and (max-width: 767px) {
-  .gym-section__picture {
-    height: auto;
-    aspect-ratio: 1.5/1;
   }
 }
 
