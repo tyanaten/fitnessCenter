@@ -61,8 +61,8 @@
   @include vp-767 {
     min-width: $vr-290;
     width: 90.62%;
-    min-height: 491px;
-    padding: 30px 32px 70px 32px;
+    min-height: 400px;
+    padding: 24px 32px 70px 32px;
   }
 
   h2 {
@@ -76,12 +76,16 @@
     color: $color-default-dark;
 
     @include vp-1199 {
+      position: relative;
+      left: -4px;
+      margin-bottom: 31px;
       font-size: 42px;
       line-height: 50px;
-      margin-bottom: 31px;
+      text-align: center;
     }
 
     @include vp-767 {
+      margin-bottom: 41px;
       font-size: 32px;
       line-height: 38px;
     }
@@ -165,7 +169,7 @@
   width: 100%;
   height: 100%;
   margin: 0;
-  padding: 30px;
+  padding: 24px;
   font-weight: 700;
   font-size: 18px;
   line-height: 27px;
@@ -174,6 +178,11 @@
   background-repeat: no-repeat;
   background-position: 50% 0;
   background-size: cover;
+
+
+  @include vp-1199 {
+    padding: 22px;
+  }
 
   &--ann {
     background-image: url("../img/swiper-images/swiper-image1@1x.jpg");
@@ -235,29 +244,29 @@
   }
 
   &--prev {
-    top: 56%;
+    top: 54%;
     left: 0;
     transform: rotate(180deg);
 
     @include vp-1199 {
-      top: 51%;
+      top: 50%;
     }
 
     @include vp-767 {
-      top: 50%;
+      top: 47%;
     }
   }
 
   &--next {
-    top: 56%;
+    top: 54%;
     right: 0;
 
     @include vp-1199 {
-      top: 51%;
+      top: 50%;
     }
 
     @include vp-767 {
-      top: 50%;
+      top: 47%;
     }
   }
 

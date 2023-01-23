@@ -18,13 +18,29 @@
   grid-template-columns: 80px auto;
   grid-template-rows: min-content auto;
   column-gap: 28px;
-  row-gap: 25px;
+  row-gap: 18px;
   width: clamp(100px, 48.27%, 560px);
   min-height: 242px;
   margin-bottom: 50px;
   padding: 62px;
+  padding-bottom: 48px;
   background: #1c3374;
   box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
+
+  @include vp-1199 {
+    width: clamp(566px, 83.5%, 900px);
+    padding: 62px 65px;
+    padding-bottom: 46px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 68px auto;
+    column-gap: 15px;
+    row-gap: 16px;
+    width: clamp(226px, 77.93%, 500px);
+    padding: 40px 25px;
+    padding-bottom: 25px;
+  }
 
   picture {
     display: block;
@@ -33,6 +49,8 @@
     grid-row-end: 3;
 
     @include vp-767 {
+      position: relative;
+      left: 16px;
       width: 68px;
       height: 68px;
       grid-row-start: 1;
@@ -42,19 +60,6 @@
 
   &:last-child {
     margin-bottom: 0;
-  }
-
-  @include vp-1199 {
-    width: clamp(566px, 83.5%, 900px);
-    padding: 62px 65px;
-  }
-
-  @include vp-767 {
-    grid-template-columns: 68px auto;
-    column-gap: 15px;
-    row-gap: 20px;
-    width: clamp(226px, 77.93%, 500px);
-    padding: 40px 25px;
   }
 }
 
@@ -66,6 +71,8 @@
   color: $color-default-white;
 
   @include vp-767 {
+    position: relative;
+    left: 16px;
     display: block;
     margin: auto 0;
     line-height: 26px;

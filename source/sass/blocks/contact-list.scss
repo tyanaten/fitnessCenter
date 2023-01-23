@@ -1,7 +1,7 @@
 .contact-list {
   position: relative;
   column-count: 2;
-  column-gap: 120px;
+  column-gap: 177px;
 
   @include vp-1199 {
     column-gap: 96px;
@@ -17,11 +17,15 @@
   &::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 50%;
+    top: 6px;
+    left: 57%;
     width: 1px;
-    height: 100%;
+    height: 78%;
     background-color: #74819c;
+
+    @include vp-1199 {
+      left: 50%;
+    }
 
     @include vp-767 {
       display: none;
@@ -30,24 +34,24 @@
 }
 
 .contact-list__item {
-  margin-bottom: 30px;
+  margin-bottom: 16px;
   page-break-inside: avoid;
   break-inside: avoid;
 
   @include vp-1199 {
-    margin-bottom: 35px;
+    margin-bottom: 20px;
   }
 }
 
 .contact-list__subtitle {
   margin: 0;
-  margin-bottom: 10px;
+  margin-bottom: 4px;
   font-weight: 700;
   font-size: 16px;
   line-height: 24px;
 
   @include vp-1199 {
-    margin-bottom: 20px;
+    margin-bottom: 6px;
     font-size: 20px;
     line-height: 30px;
   }

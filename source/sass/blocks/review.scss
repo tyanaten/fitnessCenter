@@ -7,32 +7,34 @@
   max-width: $vr-1160;
   min-height: 581px;
   margin: 0 auto;
-  padding: 117px 0 120px 0;
+  padding: 117px 0 76px 0;
 
   @include vp-1199 {
     min-width: $vr-678;
     width: 88.28%;
     min-height: 524px;
-    padding: 100px 0;
+    padding: 90px 0 70px 0;
   }
 
   @include vp-767 {
     min-width: $vr-290;
     width: 90.62%;
     min-height: 549px;
-    padding: 70px 0;
+    padding: 64px 0;
+    padding-bottom: 26px;
   }
 
   &--with-js {
-    padding: 117px 300px 120px 300px;
+    padding: 117px 300px 76px 300px;
     overflow: hidden;
 
     @include vp-1199 {
-      padding: 100px 56px;
+      padding: 90px 56px 70px 56px;
     }
 
     @include vp-767 {
-      padding: 70px 32px;
+      padding: 64px 32px;
+      padding-bottom: 26px;
     }
   }
 
@@ -47,12 +49,13 @@
     color: $color-default-dark;
 
     @include vp-1199 {
+      margin-bottom: 40px;
       font-size: 42px;
       line-height: 50px;
-      margin-bottom: 50px;
     }
 
     @include vp-767 {
+      margin-bottom: 42px;
       font-size: 32px;
       line-height: 38px;
     }
@@ -85,7 +88,7 @@
     transform: rotate(180deg);
 
     @include vp-1199 {
-      top: 55%;
+      top: 54%;
       left: 0;
     }
 
@@ -99,7 +102,7 @@
     right: 244px;
 
     @include vp-1199 {
-      top: 55%;
+      top: 54%;
       right: 0;
     }
 

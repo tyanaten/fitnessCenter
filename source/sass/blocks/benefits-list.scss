@@ -1,20 +1,20 @@
 .benefits-list {
   display: grid;
   grid-template-columns: auto 240px auto;
-  gap: 167px 60px;
+  gap: 141px 60px;
   width: 100%;
   padding: 0 12px 0 19px;
   overflow-y: hidden;
 
   @include vp-1199 {
     grid-template-columns: repeat(2, 1fr);
-    gap: 50px 52px;
+    gap: 43px 36px;
     padding: 0;
   }
 
   @include vp-767 {
     grid-template-columns: 1fr;
-    gap: 50px;
+    gap: 38px;
   }
 }
 
@@ -51,7 +51,8 @@
     width: 240px;
     min-width: auto;
     max-width: initial;
-    padding: 65px 34px;
+    height: min-content;
+    padding: 90px 34px 59px 34px;
     text-align: center;
     background-color: #1c3374;
 
@@ -65,21 +66,23 @@
       width: clamp(442px, 65.19%, 800px);
       margin: 0 auto;
       padding: 45px;
+      padding-bottom: 38px;
     }
 
     @include vp-767 {
       grid-column: initial;
       grid-row: initial;
       width: 100%;
-      padding: 50px 27px;
+      padding: 55px 52px;
+      padding-bottom: 44px;
     }
   }
 
   &::after {
     content: "";
     position: absolute;
-    right: 0;
-    bottom: -83px;
+    right: 3px;
+    bottom: -60px;
     width: 100%;
     height: 2px;
     background-color: rgba(209, 10, 66, 0.2);
@@ -91,18 +94,21 @@
 }
 
 .benefits-list__number {
+  position: relative;
+  top: -7px;
   display: block;
   width: min-content;
   height: max-content;
   margin-right: 30px;
   font-weight: 700;
   font-size: 71px;
-  line-height: 60px;
+  line-height: 67px;
   background: linear-gradient(127.61deg, #d10a42 0%, #0041ca 45.58%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 
   @include vp-1199 {
+    top: 7px;
     margin-right: 29px;
     font-size: 58px;
     line-height: 45px;
@@ -114,26 +120,33 @@
   }
 
   &--main {
-    margin-bottom: 25px;
+    margin-bottom: 27px;
     margin-right: 0;
     font-size: 74px;
-    line-height: 70px;
+    line-height: 11px;
     color: $color-default-white;
     -webkit-text-fill-color: initial;
 
     @include vp-1199 {
-      margin-bottom: 10px;
+      position: relative;
+      top: 2px;
+      left: 10px;
+      font-size: 74px;
+      margin-bottom: 16px;
     }
 
     @include vp-767 {
-      margin-bottom: 5px;
+      top: -3px;
+      left: -1px;
+      margin-bottom: 7px;
     }
   }
 }
 
 .benefits-list__unit {
   position: relative;
-  top: -10px;
+  top: -18px;
+  left: 2px;
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 2;
@@ -145,11 +158,13 @@
   color: #2e35ac;
 
   @include vp-1199 {
-    top: 0;
+    top: 10px;
+    left: 0;
   }
 
   @include vp-767 {
-    margin-bottom: 10px;
+    top: 2px;
+    margin-bottom: 5px;
   }
 }
 
@@ -163,33 +178,33 @@
 
 .benefits-list__title {
   margin: 0;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   font-weight: 700;
   font-size: 22px;
-  line-height: 33px;
+  line-height: 18px;
   color: $color-default-dark;
 
   @include vp-1199 {
-    margin-bottom: 7px;
+    margin-bottom: 4px;
     font-size: 20px;
     line-height: 30px;
   }
 
   &--main {
-    margin-bottom: 40px;
+    margin-bottom: 32px;
     font-weight: 700;
     font-size: 26px;
     line-height: 39px;
     color: $color-default-white;
 
     @include vp-1199 {
-      margin-bottom: 30px;
+      margin-bottom: 14px;
       font-size: 22px;
       line-height: 33px;
     }
 
     @include vp-767 {
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
   }
 }

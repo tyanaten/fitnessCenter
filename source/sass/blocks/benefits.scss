@@ -7,23 +7,26 @@
   max-width: $vr-1160;
   min-height: 664px;
   margin: 0 auto;
-  padding: 146px 60px 91px 60px;
+  padding: 146px 60px 72px 60px;
 
   @include vp-1199 {
     min-width: $vr-678;
     width: 88.28%;
     min-height: 755px;
-    padding: 100px 0;
+    padding: 92px 0;
   }
 
   @include vp-767 {
     min-width: initial;
     width: 100%;
     min-height: 1231px;
-    padding: 70px 0;
+    padding: 65px 0;
+    padding-bottom: 60px;
   }
 
   h2 {
+    position: relative;
+    left: 5px;
     margin: 0;
     margin-bottom: 55px;
     font-family: $ff-alumni;
@@ -35,9 +38,10 @@
     color: $color-default-dark;
 
     @include vp-1199 {
+      left: -11px;
       font-size: 42px;
       line-height: 50px;
-      margin-bottom: 60px;
+      margin-bottom: 41px;
     }
 
     @include vp-767 {

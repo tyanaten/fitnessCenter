@@ -5,13 +5,18 @@
   @include vp-1199 {
     position: relative;
     z-index: 10;
+    margin-bottom: 99px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 70px;
   }
 
   &::after {
     content: attr(data-price);
     position: absolute;
-    top: 1400px;
-    right: calc(50% - 800px);
+    top: 1320px;
+    right: calc(50% - 791px);
     z-index: 1;
     display: block;
     width: 321px;
@@ -27,8 +32,8 @@
     }
 
     @include vp-1199 {
-      top: 1700px;
-      right: calc(-10%);
+      top: 1509px;
+      right: -1%;
       width: 289px;
       height: 345px;
     }
@@ -64,13 +69,13 @@
     min-width: $vr-290;
     width: 90.62%;
     min-height: 1487px;
-    padding: 70px 0;
-    padding-bottom: 40px;
+    padding: 64px 0;
+    padding-bottom: 32px;
   }
 
   h2 {
     margin: 0;
-    margin-bottom: 25px;
+    margin-bottom: 16px;
     font-family: $ff-alumni;
     font-weight: 600;
     font-size: 54px;
@@ -79,12 +84,15 @@
     color: $color-default-dark;
 
     @include vp-1199 {
+      position: relative;
+      left: -7px;
+      margin-bottom: 20px;
       font-size: 42px;
       line-height: 50px;
     }
 
     @include vp-767 {
-      margin-bottom: 35px;
+      margin-bottom: 21px;
       font-size: 32px;
       line-height: 38px;
     }
