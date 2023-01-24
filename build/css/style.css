@@ -2449,7 +2449,7 @@ button,
 }
 
 .review__wrapper--with-js {
-  padding: 117px 300px 76px 300px;
+  padding: 117px 100px 76px 100px;
   overflow: hidden;
 }
 
@@ -2481,7 +2481,7 @@ button,
 
 .review__carousel-button--prev {
   top: 56%;
-  left: 244px;
+  left: calc(50% - 336px);
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
@@ -2489,7 +2489,7 @@ button,
 
 .review__carousel-button--next {
   top: 56%;
-  right: 244px;
+  right: calc(50% - 336px);
 }
 
 .review__carousel-button--with-js {
@@ -2536,6 +2536,8 @@ button,
 }
 
 .reviews-list__item {
+  position: relative;
+  left: calc(50% - 280px);
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 80px auto;
@@ -2548,7 +2550,8 @@ button,
   -moz-column-gap: 28px;
   column-gap: 28px;
   row-gap: 18px;
-  width: clamp(100px, 48.27%, 560px);
+  width: 560px;
+  max-width: 560px;
   min-height: 242px;
   margin-bottom: 50px;
   padding: 62px;
@@ -3070,6 +3073,7 @@ button,
   -ms-flex-direction: column;
   flex-direction: column;
   width: 100%;
+  min-height: 211px;
   padding: 28px;
   padding-top: 23px;
   color: #1c3374;
@@ -3829,7 +3833,10 @@ button,
   }
 
   .reviews-list__item {
+    position: static;
+    left: initial;
     width: clamp(566px, 83.5%, 900px);
+    max-width: initial;
     padding: 62px 65px;
     padding-bottom: 46px;
   }
@@ -4036,7 +4043,6 @@ button,
   }
 
   .offer-list__item {
-    min-height: 211px;
     padding-bottom: 32px;
   }
 
@@ -4446,11 +4452,11 @@ button,
   }
 
   .trainers__slider-button--prev {
-    top: 47%;
+    top: 51.8%;
   }
 
   .trainers__slider-button--next {
-    top: 47%;
+    top: 51.8%;
   }
 
   .review__wrapper {

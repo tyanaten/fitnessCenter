@@ -25,7 +25,7 @@
   }
 
   &--with-js {
-    padding: 117px 300px 76px 300px;
+    padding: 117px 100px 76px 100px;
     overflow: hidden;
 
     @include vp-1199 {
@@ -84,7 +84,7 @@
 
   &--prev {
     top: 56%;
-    left: 244px;
+    left: calc(50% - 336px);
     transform: rotate(180deg);
 
     @include vp-1199 {
@@ -99,7 +99,7 @@
 
   &--next {
     top: 56%;
-    right: 244px;
+    right: calc(50% - 336px);
 
     @include vp-1199 {
       top: 54%;
