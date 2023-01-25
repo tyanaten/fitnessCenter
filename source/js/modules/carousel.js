@@ -11,7 +11,7 @@ swiperButtons.forEach((button) => {
 const swiper = new Swiper('.carousel', {
   slidesPerView: 1,
   speed: 1,
-  spaceBetween: 700,
+  spaceBetween: 10,
   allowTouchMove: true,
   freeMode: true,
   autoHeight: true,

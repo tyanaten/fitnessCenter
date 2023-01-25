@@ -62,6 +62,15 @@
   }
 }
 
+.review__carousel-wrapper {
+  width: 560px;
+  overflow: hidden;
+
+  @include vp-1199 {
+    width: 100%;
+  }
+}
+
 .review__carousel-button {
   position: absolute;
   z-index: 5;

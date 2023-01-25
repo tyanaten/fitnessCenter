@@ -2468,6 +2468,11 @@ button,
   color: #102654;
 }
 
+.review__carousel-wrapper {
+  width: 560px;
+  overflow: hidden;
+}
+
 .review__carousel-button {
   position: absolute;
   z-index: 5;
@@ -2523,6 +2528,7 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  width: 100%;
 }
 
 .reviews-list--with-js {
@@ -2533,6 +2539,7 @@ button,
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
+  width: 100%;
 }
 
 .reviews-list--with-js .reviews-list__item {
@@ -3823,6 +3830,10 @@ button,
     line-height: 50px;
   }
 
+  .review__carousel-wrapper {
+    width: 100%;
+  }
+
   .review__carousel-button--prev {
     top: 285px;
     left: 0;
@@ -4200,6 +4211,7 @@ button,
     width: 90.62%;
     min-height: 491px;
     padding: 17px 0;
+    padding-bottom: 80px;
   }
 
   .main-list__link {

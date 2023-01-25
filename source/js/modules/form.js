@@ -29,6 +29,12 @@ const hideContent = (element, action) => {
   element.classList[action]('visually-hidden');
 };
 
+document.addEventListener('invalid', (() => {
+  return function (e) {
+    e.preventDefault();
+  };
+})(), true);
+
 telInput.addEventListener('input', () => {
   const value = telInput.value.replace(/\D+/g, '');
   const numberLength = 11;

@@ -2,10 +2,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 
   &--with-js {
     flex-direction: row;
     align-items: flex-start;
+    width: 100%;
 
     .reviews-list__item {
       margin-bottom: 0;
