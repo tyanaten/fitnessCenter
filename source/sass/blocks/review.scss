@@ -83,31 +83,31 @@
   }
 
   &--prev {
-    top: 56%;
+    top: 325px;
     left: calc(50% - 336px);
     transform: rotate(180deg);
 
     @include vp-1199 {
-      top: 54%;
+      top: 285px;
       left: 0;
     }
 
     @include vp-767 {
-      top: 54%;
+      top: 302px;
     }
   }
 
   &--next {
-    top: 56%;
+    top: 325px;
     right: calc(50% - 336px);
 
     @include vp-1199 {
-      top: 54%;
+      top: 285px;
       right: 0;
     }
 
     @include vp-767 {
-      top: 54%;
+      top: 302px;
     }
   }
 
