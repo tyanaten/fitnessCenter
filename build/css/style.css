@@ -2956,6 +2956,8 @@ button,
 
 .promo__wrapper img {
   height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
   aspect-ratio: 1.32/1;
 }
 
@@ -2964,27 +2966,22 @@ button,
   display: -ms-flexbox;
   display: flex;
   height: 100%;
+  overflow: hidden;
 }
 
 .special-offer__image {
   width: clamp(90px, 50%, 280px);
+  height: 100%;
   aspect-ratio: 1/1.65;
   overflow: hidden;
-  background-color: green;
 }
 
 .special-offer__image img {
-  position: relative;
-  top: -19%;
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
-  -o-object-position: 20px;
-  object-position: 20px;
-  -webkit-transform: scale(1.4);
-  -ms-transform: scale(1.4);
-  transform: scale(1.4);
-  aspect-ratio: 1/1.65;
+  -o-object-position: 35% 0;
+  object-position: 35% 0;
 }
 
 .special-offer__article {
@@ -4015,15 +4012,9 @@ button,
   }
 
   .special-offer__image img {
-    height: initial;
     width: 100%;
-    top: -31%;
-    -webkit-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    transform: scale(1.2);
-    -o-object-position: 25px;
-    object-position: 25px;
-    aspect-ratio: 1/1.5;
+    -o-object-position: 50% 16%;
+    object-position: 50% 16%;
   }
 
   .special-offer__article {
@@ -4623,8 +4614,6 @@ button,
   .promo__wrapper img {
     position: relative;
     top: 23px;
-    -o-object-fit: cover;
-    object-fit: cover;
     -o-object-position: 50% 0;
     object-position: 50% 0;
     -webkit-transform: scale(1.16);
@@ -4647,14 +4636,15 @@ button,
   }
 
   .special-offer__image img {
-    top: -37%;
-    left: 8%;
+    position: relative;
+    top: -3%;
+    left: -1%;
     height: initial;
-    -webkit-transform: scale(1.18);
-    -ms-transform: scale(1.18);
-    transform: scale(1.18);
-    -o-object-position: 0;
-    object-position: 0;
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+    -o-object-position: 35% 0;
+    object-position: 35% 0;
     aspect-ratio: initial;
   }
 
@@ -4675,7 +4665,7 @@ button,
   }
 
   .special-offer__text {
-    margin-bottom: 40px;
+    margin-bottom: 25px;
   }
 
   .special-offer__link {

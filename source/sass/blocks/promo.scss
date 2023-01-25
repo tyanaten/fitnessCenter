@@ -31,12 +31,12 @@
 
   img {
     height: 100%;
+    object-fit: cover;
     aspect-ratio: 1.32 / 1;
 
     @include vp-767 {
       position: relative;
       top: 23px;
-      object-fit: cover;
       object-position: 50% 0;
       transform: scale(1.16);
       aspect-ratio: initial;
