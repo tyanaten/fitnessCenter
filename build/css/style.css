@@ -2966,14 +2966,16 @@ button,
   height: 100%;
 }
 
-.special-offer picture {
+.special-offer__image {
   width: clamp(90px, 50%, 280px);
+  aspect-ratio: 1/1.65;
   overflow: hidden;
+  background-color: green;
 }
 
-.special-offer img {
+.special-offer__image img {
   position: relative;
-  top: -87px;
+  top: -19%;
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
@@ -3031,6 +3033,7 @@ button,
   display: block;
   margin-top: auto;
   margin-right: auto;
+  padding-top: 15px;
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
@@ -4006,22 +4009,20 @@ button,
     min-height: 292px;
   }
 
-  .special-offer picture {
+  .special-offer__image {
     width: clamp(90px, 58.8%, 900px);
-    max-height: 100%;
     aspect-ratio: 1/1.16;
   }
 
-  .special-offer img {
+  .special-offer__image img {
+    height: initial;
     width: 100%;
-    height: 100%;
-    top: -70px;
-    left: 1.8%;
+    top: -31%;
     -webkit-transform: scale(1.2);
     -ms-transform: scale(1.2);
     transform: scale(1.2);
-    -o-object-position: 22px;
-    object-position: 22px;
+    -o-object-position: 25px;
+    object-position: 25px;
     aspect-ratio: 1/1.5;
   }
 
@@ -4640,13 +4641,12 @@ button,
     width: 100%;
   }
 
-  .special-offer picture {
+  .special-offer__image {
     width: 100%;
-    min-height: initial;
     aspect-ratio: 1/1.03;
   }
 
-  .special-offer img {
+  .special-offer__image img {
     top: -37%;
     left: 8%;
     height: initial;
